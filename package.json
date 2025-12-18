@@ -1,0 +1,17 @@
+{
+  "name": "plantilla-metricas-cro",
+  "version": "1.0.0",
+  "description": "Plantilla para revisión de métricas de experimentos CRO",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.1"
+  }
+}
+
