@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plantilla para revisión de métricas de experimentos CRO</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text&family=Inter:wght@400;500&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text&family=Inter:wght@400;500&family=Nunito+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       --bg-dark: #2f343d;
@@ -21,7 +24,9 @@
       --white: #ffffff;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -124,7 +129,9 @@
       color: #0f172a;
     }
 
-    input[type="text"], select, textarea {
+    input[type="text"],
+    select,
+    textarea {
       width: 100%;
       padding: 8px 12px;
       border: 1px solid #cbd5e1;
@@ -135,7 +142,8 @@
       background: var(--white);
     }
 
-    input::placeholder, textarea::placeholder {
+    input::placeholder,
+    textarea::placeholder {
       color: var(--slate-400);
     }
 
@@ -206,12 +214,12 @@
       inset: 0;
       background: var(--gray-1);
       -webkit-mask: center / 18px 18px no-repeat url("https://www.figma.com/api/mcp/asset/c73bfd9c-2c09-4fb9-8fc9-c5ce6060119e");
-              mask: center / 18px 18px no-repeat url("https://www.figma.com/api/mcp/asset/c73bfd9c-2c09-4fb9-8fc9-c5ce6060119e");
+      mask: center / 18px 18px no-repeat url("https://www.figma.com/api/mcp/asset/c73bfd9c-2c09-4fb9-8fc9-c5ce6060119e");
     }
 
     .icon-btn.plus::before {
       -webkit-mask: center / 18px 18px no-repeat url("https://www.figma.com/api/mcp/asset/5aeba89a-3c6c-4a45-888a-26cc757816d8");
-              mask: center / 18px 18px no-repeat url("https://www.figma.com/api/mcp/asset/5aeba89a-3c6c-4a45-888a-26cc757816d8");
+      mask: center / 18px 18px no-repeat url("https://www.figma.com/api/mcp/asset/5aeba89a-3c6c-4a45-888a-26cc757816d8");
     }
 
     .stepper-display {
@@ -311,12 +319,44 @@
       height: 16px;
     }
 
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 4px 0;
+    }
+
+    .radio-label {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      color: #000;
+      white-space: nowrap;
+    }
+
+    .radio-label input[type="radio"] {
+      width: 14px;
+      height: 14px;
+      cursor: pointer;
+      margin: 0;
+    }
+
+    .radio-label span {
+      user-select: none;
+    }
+
+    .radio-label:hover {
+      opacity: 0.8;
+    }
+
     .download-icon {
       width: 24px;
       height: 24px;
       background: var(--gray-1);
       -webkit-mask: center / 14px 17px no-repeat url("https://www.figma.com/api/mcp/asset/c6963ee9-f982-4ced-9a05-e1a19faa9dc6");
-              mask: center / 14px 17px no-repeat url("https://www.figma.com/api/mcp/asset/c6963ee9-f982-4ced-9a05-e1a19faa9dc6");
+      mask: center / 14px 17px no-repeat url("https://www.figma.com/api/mcp/asset/c6963ee9-f982-4ced-9a05-e1a19faa9dc6");
     }
 
     /* Tests guardados */
@@ -386,7 +426,8 @@
       opacity: 0.7;
     }
 
-    .no-tests, .error {
+    .no-tests,
+    .error {
       font-size: 13px;
       color: var(--gray-1);
       text-align: center;
@@ -418,12 +459,22 @@
     }
 
     @media (max-width: 1200px) {
-      .page { max-width: 100%; }
-      .content { flex-direction: column; }
-      .panel { width: 100%; min-width: auto; }
+      .page {
+        max-width: 100%;
+      }
+
+      .content {
+        flex-direction: column;
+      }
+
+      .panel {
+        width: 100%;
+        min-width: auto;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="page">
     <section class="hero">
@@ -467,20 +518,39 @@
                 <option>Mobile</option>
               </select>
               <span class="chevron-wrapper">
-                <img class="chevron-icon" src="https://www.figma.com/api/mcp/asset/40782dc5-c603-4760-80b0-42b1b7125dab" alt="">
+                <img class="chevron-icon" src="https://www.figma.com/api/mcp/asset/40782dc5-c603-4760-80b0-42b1b7125dab"
+                  alt="">
               </span>
             </div>
             <div class="helper">
-              <img class="info-icon" src="https://www.figma.com/api/mcp/asset/1091812a-f4c9-4581-af90-f1598f7be7aa" alt="">
+              <img class="info-icon" src="https://www.figma.com/api/mcp/asset/1091812a-f4c9-4581-af90-f1598f7be7aa"
+                alt="">
               <span>Selecciona la combinación de dispositivos sobre los que se efectuarán las pruebas</span>
             </div>
           </div>
         </div>
 
         <div class="form-section">
+          <div class="form-body">
+            <label for="review-link">Hipervínculo de revisión</label>
+            <input id="review-link" type="text" placeholder="https://ejemplo.com/revision">
+            <small>Introduce el enlace de revisión del experimento</small>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-body textarea-wrapper">
+            <label for="comentarios">Comentarios</label>
+            <textarea id="comentarios" placeholder="Añade comentarios adicionales sobre el experimento..."></textarea>
+            <small>Comentarios o notas sobre el experimento</small>
+          </div>
+        </div>
+
+        <div class="form-section">
           <div class="form-body textarea-wrapper">
             <label for="metricas">Métricas</label>
-            <textarea id="metricas" placeholder="1.  Inicio contratación Plan Online&#10;2.  Fin contratacion Plan Online&#10;"></textarea>
+            <textarea id="metricas"
+              placeholder="1.  Inicio contratación Plan Online&#10;2.  Fin contratacion Plan Online&#10;"></textarea>
             <small>Introduce las métricas a analizar, una por línea</small>
           </div>
         </div>
@@ -488,6 +558,7 @@
         <div class="button-row">
           <button class="primary-btn" type="button" id="generate-btn">Generar plantilla</button>
           <button class="secondary-btn" type="button" id="save-btn">💾 Guardar</button>
+          <button class="secondary-btn" type="button" id="export-btn">📥 Exportar</button>
         </div>
 
         <div class="saved-tests">
@@ -507,6 +578,8 @@
       </div>
     </section>
   </div>
+  <script src="https://unpkg.com/exceljs@4.4.0/dist/exceljs.min.js"></script>
   <script src="./main.js"></script>
 </body>
+
 </html>
